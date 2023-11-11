@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Cera Round Pro', sans-serif;
+    src: url('./font/Fontspring-DEMO-ceraroundpro-regular.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-white: #fff;
+    --color-black: #242424;
+    --color-red: #BB2339;
+    --primary-font: 'Cera Round Pro', sans-serif;
+    --secondary-font: 'Open Sans', sans-serif;
+}
+
+.container {
+    max-width: 1330px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
