@@ -3,6 +3,14 @@
     src: url('./font/Fontspring-DEMO-ceraroundpro-regular.otf');
 }
 
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -22,4 +30,97 @@
     width: 100%;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+header {
+    background-color: var(--color-red);
+}
+
+.navbar__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px 0;
+}
+
+.navbar__menu-item {
+    display: flex;
+    column-gap: 40px;
+    align-items: center;
+}
+
+.navbar__menu-link {
+    font-size: 16px;
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    color: var(--color-white);
+    letter-spacing: 0.64;
+}
+
+.navbar-btn {
+    padding: 10px 40px;
+    font-size: 16px;
+    font-family: var(--secondary-font);
+    font-weight: 600;
+    border-radius: 100px;
+    border: 1px solid var(--color-white);
+    background: transparent;
+    color: var(--color-white);
+    transition: all 0.4s linear;
+    cursor: pointer;
+}
+
+.navbar-btn:hover {
+    color: var(--color-red);
+    background: var(--color-white);
+}
+
+.navbar-btn:active {
+    transform: scale(0.96);
+}
+
+.hero__wrapper {
+    display: flex;
+    align-items: center;
+    padding: 80px 0px 237px 0px;
+    column-gap: 98px;
+}
+
+.hero__wrapper-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__wrapper-left span {
+    font-variant-numeric: lining-nums tabular-nums;
+    font-size: 23px;
+    font-family: var(--primary-font);
+    font-weight: 700;
+    line-height: 29.9px;
+    letter-spacing: 0.92px;
+    text-transform: capitalize;
+    color: var(--color-white);
+    margin-bottom: 25px;
+}
+
+.hero__wrapper-left h1 {
+    font-size: 80px;
+    font-family: var(--primary-font);
+    font-weight: 700;
+    line-height: 117px;
+    letter-spacing: 3.6px;
+    text-transform: capitalize;
+    color: var(--color-white);
+    margin-bottom: 20px;
+}
+
+.hero__wrapper-left p {
+    font-family: var(--secondary-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0.64px;
+    opacity: 0.7;
+    color: var(--color-white);
+    margin-bottom: 40px;
 }
