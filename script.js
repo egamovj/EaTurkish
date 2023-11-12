@@ -37,3 +37,37 @@ function fetchData() {
 }
 
 fetchData();
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    fetchAndRender('all');
+});
+
+function fetchAndRender(name) {
+    const apiUrl = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`;
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => renderDrinks(data.drinks))
+        .catch(error => console.error('Error fetching data:', error));
+}
+
+function renderDrinks(drinks) {
+    const drinksContainer = document.getElementById('drinks-container');
+    drinksContainer.innerHTML = '';
+
+    if (drinks) {
+        drinks.slice(0, 12).forEach(drink => {
+            const drinkElement = document.createElement('div');
+            drinkElement.classList.add('drink-container')
+            drinkElement.innerHTML = `
+          <img src="${drink.strDrinkThumb}" alt="${drink.strDrink}">
+          <h3>${drink.strDrink}</h3>
+          <p>${drink.strCategory}</p>
+        `;
+            drinksContainer.appendChild(drinkElement);
+        });
+    } else {
+        drinksContainer.innerHTML = '<p>No drinks found.</p>';
+    }
+}

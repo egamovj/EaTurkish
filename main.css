@@ -200,3 +200,78 @@ header {
     border-radius: 14px;
     text-align: center;
 }
+
+.menu__wrapper {
+    padding: 120px 0;
+}
+
+.menu__wrapper h2 {
+    color: var(--color-red);
+    font-variant-numeric: lining-nums tabular-nums;
+    font-family: var(--primary-font);
+    font-size: 48px;
+    font-weight: 500;
+    letter-spacing: 1.44px;
+    text-transform: capitalize;
+    margin-bottom: 60px;
+}
+
+.drink-container img {
+    max-width: 270px;
+}
+
+.buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.buttons-container button {
+    padding: 10px 30px;
+    font-size: 16px;
+    font-family: var(--secondary-font);
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    border-radius: 100px;
+    border: 1px solid var(--color-red);
+    background: transparent;
+    color: var(--color-black);
+    transition: all 0.4s linear;
+    cursor: pointer;
+}
+
+.buttons-container button:hover {
+    background-color: var(--color-red);
+    color: var(--color-white);
+    border-color: var(--color-white);
+}
+
+.buttons-container button:active {
+    transform: scale(0.96);
+}
+
+.buttons-container .active {
+    background-color: var(--color-red);
+    color: var(--color-white);
+}
+
+#drinks-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 14px;
+    text-align: center;
+    row-gap: 30px;
+    flex-wrap: wrap;
+}
+
+.drink-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    border-radius: 14px;
+    border: 1px solid rgba(36, 36, 36, 0.10);
+    background: #FFF;
+    padding: 20px;
+}
