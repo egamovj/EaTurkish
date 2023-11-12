@@ -275,3 +275,110 @@ header {
     background: #FFF;
     padding: 20px;
 }
+
+.testimony {
+    background: #F4F4F4;
+    padding: 120px 0px;
+}
+
+.testimony__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 60px;
+}
+
+.testimony__wrapper-texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 8px;
+}
+
+.testimony__wrapper-texts h3 {
+    color: var(--color-black);
+    font-variant-numeric: lining-nums tabular-nums;
+    font-family: var(--primary-font);
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 29.9px;
+    letter-spacing: 0.92px;
+    text-transform: capitalize;
+}
+
+.testimony__wrapper-texts h2 {
+    color: var(--color-black);
+    font-variant-numeric: lining-nums tabular-nums;
+    font-family: var(--primary-font);
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 62.4px;
+    letter-spacing: 1.44px;
+    text-transform: capitalize;
+}
+
+.testimony__wrapper-content {
+    display: flex;
+    column-gap: 35px;
+}
+
+.content-div {
+    border-radius: 10px;
+    border: 1px solid rgba(51, 51, 51, 0.10);
+    background: #FFF;
+    padding: 30px 50px 20px;
+}
+
+.content-div h4 {
+    color: #333;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 26px;
+    margin-bottom: 10px;
+}
+
+.content-div p {
+    color: #333;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+
+.content-div div {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.content-div div span {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+}
+
+.content-div div span span {
+    color: #333;
+    font-family: var(--secondary-font);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.testimony__wrapper-page {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.testimony__wrapper-page span {
+    color: var(--color-black);
+    font-variant-numeric: lining-nums tabular-nums;
+    font-family: var(--primary-font);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0.64px;
+    text-transform: capitalize;
+}
