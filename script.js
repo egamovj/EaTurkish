@@ -1,4 +1,4 @@
-function fetchData() {
+function fetchDataMojitos() {
     fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=mojito')
         .then(response => response.json())
         .then(data => {
@@ -36,7 +36,7 @@ function fetchData() {
         .catch(error => console.error('Error:', error));
 }
 
-fetchData();
+fetchDataMojitos();
 
 
 
@@ -71,3 +71,44 @@ function renderDrinks(drinks) {
         drinksContainer.innerHTML = '<p>No drinks found.</p>';
     }
 }
+
+
+function fetchDataChocolate() {
+    fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=chocolate')
+        .then(response => response.json())
+        .then(data => {
+            if (data.drinks) {
+                const cocktailList = document.getElementById('news__wrapper-content');
+                for (let i = 0; i < data.drinks.length; i++) {
+                    const cocktail = data.drinks[i];
+
+                    const drinkDiv = document.createElement('div');
+                    drinkDiv.classList.add('news-content')
+                    const textDiv = document.createElement('div');
+                    textDiv.classList.add('texts')
+
+                    const img = document.createElement('img');
+                    const nameParagraph = document.createElement('p');
+                    const idPrice = document.createElement('span');
+
+                    img.src = cocktail.strDrinkThumb;
+                    img.alt = cocktail.strDrink;
+                    nameParagraph.textContent = `${cocktail.strDrink}`;
+                    idPrice.textContent = `$12.00`;
+
+                    drinkDiv.appendChild(img);
+
+                    textDiv.appendChild(nameParagraph);
+                    textDiv.appendChild(idPrice);
+
+                    cocktailList.appendChild(drinkDiv);
+                    drinkDiv.appendChild(textDiv);
+                }
+            } else {
+                console.error('No drinks found.');
+            }
+        })
+        .catch(error => console.error('Error:', error));
+}
+
+fetchDataChocolate();
