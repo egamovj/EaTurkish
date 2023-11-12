@@ -501,4 +501,17 @@ header {
 
 .play {
     background-image: url('./img/background.jpeg');
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+    margin-bottom: 120px;
+}
+
+.play__wrapper {
+    padding: 332px 600px;
+    margin: 0 auto;
+}
+
+.gallery {
+    background: #F4F4F4;
 }
